@@ -1,3 +1,30 @@
+# Prepare your Dev Environemnt
+
+## Install JDK 11 on CentOS 7
+
+```
+sudo yum install java-11-openjdk-devel
+```
+## Install Maven
+```
+sudo yum install maven
+```
+Set JAVA_HOME and M2_HOME and PATH envarnemnt variables
+
+Get the installed package details
+
+```
+rpm -ql java-11-openjdk-devel-11.0.16.1.1-1.el7_9.x86_64
+rpm -ql maven-3.0.5-17.el7.noarch
+```
+
+vi .bashrc
+
+```
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64
+export M2_HOME=/usr/share/maven
+export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin
+
 # Spring PetClinic Sample Application [![Build Status](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml/badge.svg)](https://github.com/spring-projects/spring-petclinic/actions/workflows/maven-build.yml)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/spring-projects/spring-petclinic)
